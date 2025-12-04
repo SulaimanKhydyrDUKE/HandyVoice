@@ -17,5 +17,11 @@ class Solution(object):
                 return False
             elif value != mapT[key]:
                 return False
+        for key, value in mapT.items():
+            if key not in mapS:
+                return False
+            elif value != mapS[key]:
+                return False
+
         return True
         
