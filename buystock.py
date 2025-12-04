@@ -21,5 +21,15 @@ class Solution(object):
             if(d>max): 
                 max = d
         return max
+
+### BETTER SOLUTION - 94% less memory
+class Solution(object):
+    def maxProfit(self, prices):
+        low = prices[0]
+        Hax = 0
+        for s in prices:
+            low = min(low, s)
+            Hax = max(Hax, s - low)
+        return Hax
         
         
